@@ -1,13 +1,13 @@
 import express from 'express'
+import user from './user'
+import profile from './profile'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// 用户相关的
+router.use('/user', user)
 
-router.post('/', (req, res) => {
-  res.send('Hello World!')
-})
+// 个人信息相关的
+router.use('/profile', profile)
 
 export default router
